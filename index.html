@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    .main {
+        width: 100%;
+        height: 730px;
+        /* background-color: blue; */
+
+    }
+
+    .main_2 {
+        width: 100%;
+        height: 730px;
+        border: 5px solid black;
+        /* background-color: black; */
+     color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg);
+   background-size: cover;
+    }
+
+    .main_3 {
+        width: 100%;
+        height: 730px;
+        border: 5px solid black;
+        /* background-color: rgb(248, 243, 243); */
+        color: rgb(2, 0, 0);
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/528/806/409/1920x1080-beach-desktop-background-wallpaper-preview.jpg);
+        background-size: cover;
+    }
+
+    .but {
+        width: 100%;
+        height: 40px;
+
+        background-image: url(data:image/png;base64,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);
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+
+    .but_2 {
+        background-image: url(./download-removebg-preview\ \(10\).png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        /* background-color: blue; */
+        /* border-radius: 50%; */
+        
+    }
+
+    .aman {
+        width: 2.5%;
+        height: 40px;
+        /* border: 10px solid #9ace0c; */
+        position: relative;
+        top: -730px;
+        left: 97%;
+    }
+
+    .pic {
+        width: 25%;
+        height: 600px;
+        border: 3px solid rgb(240, 234, 234);
+        background-color: rgba(255, 255, 255, 0.321);
+
+    }
+
+    .pic_2 {
+        width: 25%;
+        height: 600px;
+        border: 3px solid rgb(9, 2, 2);
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="main_2">
+            <div class="pic">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="aman">
+        <button class="but"></button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.but').click(function () {
+                $('.main_2').toggleClass('main_3')
+            })
+            $('.but').click(function () {
+                $(this).toggleClass('but_2')
+
+            })
+            $('.but').click(function () {
+                $('.pic').toggleClass('pic_2')
+            })
+        })
+    </script>
+</body>
+
+</html>
